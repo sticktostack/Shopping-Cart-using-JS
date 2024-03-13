@@ -1,0 +1,38 @@
+document.querySelector("#carticon").addEventListener("click", () => {
+  document.querySelector(".cartsection").style.transform = "translateX(0%)";
+});
+document.querySelector("#closebtn").addEventListener("click", () => {
+  document.querySelector(".cartsection").style.transform = "translateX(100%)";
+});
+let cardContainer = document.querySelector(".card-container");
+
+function loadProducts(){
+fetch("https://dummyjson.com/products")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    let products = data.products;
+    products.forEach((product) => {
+      let div = document.createElement("div");
+      div.className = "cards";
+      let img = document.createElement("img");
+      img.src = product.thumbnail;
+      let title = document.createElement("h3");
+      title.innerHTML = product.title;
+      let price = document.createElement("h4");
+      price.innerHTML = product.price;
+      let addBtn = document.createElement("button");
+      addBtn.innerHTML = "Add to cart";
+      addBtn.id = "add";
+
+      div.appendChild(img);
+      div.appendChild(title);
+      div.appendChild(price);
+      div.appendChild(addBtn);
+      cardContainer.appendChild(div);
+      console.log(product.images[0]);
+    });
+  });
+}
+loadProducts()
