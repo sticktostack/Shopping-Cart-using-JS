@@ -54,7 +54,7 @@ h1{
 }
 #carticon{
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s;
     font-size: 45px;
     background-color: transparent;
     border: none;

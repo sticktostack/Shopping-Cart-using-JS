@@ -30,7 +30,7 @@ fetch("https://dummyjson.com/products")
         if(e.target === addBtn){
           document.querySelector("#carticon").innerHTML = 'Added to cart'
           document.querySelector("#carticon").style.transform = 'translateX(30%)'
-          document.querySelector("#carticon").style.fontSize = '27px'
+          document.querySelector("#carticon").style.fontSize = '26px'
           setTimeout(() => {
             document.querySelector("#carticon").style.fontSize = '45px'
           document.querySelector("#carticon").innerHTML = '<i class="ri-shopping-cart-2-fill"></i>'
