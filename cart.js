@@ -28,7 +28,13 @@ fetch("https://dummyjson.com/products")
       addBtn.id = "add";
       div.addEventListener('click',(e)=>{
         if(e.target === addBtn){
-          alert('ok')
+          document.querySelector("#carticon").innerHTML = 'Added to cart'
+          document.querySelector("#carticon").style.transform = 'translateX(30%)'
+          document.querySelector("#carticon").style.fontSize = '27px'
+          setTimeout(() => {
+            document.querySelector("#carticon").style.fontSize = '45px'
+          document.querySelector("#carticon").innerHTML = '<i class="ri-shopping-cart-2-fill"></i>'
+          }, 1000);
         }else{
           console.log('no');
         }
