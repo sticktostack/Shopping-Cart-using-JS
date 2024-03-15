@@ -62,6 +62,7 @@ fetch("https://dummyjson.com/products")
             </div>
           `
           // pushing all the added products on the cart 
+          console.log(`${product.title} added`);
           cart.push(product)
           console.log(cart);
           
