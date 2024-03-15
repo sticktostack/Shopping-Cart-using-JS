@@ -17,12 +17,18 @@ html,body{
     background-color: #b3b8d5;
 }
 .nav{
-    /* background-color: #424769; */
+    z-index: 98;
+    background-color: #b3b8d5;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 12vh;
     width: 100%;
+}
+#price{
+    color: #000;
+    font-size: 30px;
 }
 h1{
     color: #1a1a1a;
@@ -80,7 +86,7 @@ h1{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 40px;
+    padding-top: 50px;
     justify-content: space-between;
     gap: 20px;
 }

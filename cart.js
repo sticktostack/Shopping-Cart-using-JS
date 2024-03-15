@@ -21,18 +21,29 @@ fetch("https://dummyjson.com/products")
       let title = document.createElement("h3");
       title.innerHTML = product.title;
       let price = document.createElement("h4");
-      price.innerHTML = product.price;
+      price.id = 'price'
+      price.innerHTML = `$${product.price}`;
       let addBtn = document.createElement("button");
       addBtn.innerHTML = "Add to cart";
       addBtn.id = "add";
+      div.addEventListener('click',(e)=>{
+        if(e.target === addBtn){
+          alert('ok')
+        }else{
+          console.log('no');
+        }
+      })
+
 
       div.appendChild(img);
       div.appendChild(title);
       div.appendChild(price);
       div.appendChild(addBtn);
       cardContainer.appendChild(div);
-      console.log(product.images[0]);
+
     });
   });
 }
 loadProducts()
+
+let cart = [];
