@@ -51,23 +51,27 @@ fetch("https://dummyjson.com/products")
             title: card.querySelector('h3').innerHTML,
             price: card.querySelector('h4').innerHTML
           };
-          // creating the cart section dynamically 
-          document.querySelector('.productsection').innerHTML += `
-          <div class="product">
-                <div class="left"><img src="${product.image}" ></div>
-                <div class="right">
-                    <h2>${product.title}</h2>
-                    <p>price : ${product.price}</p>
-                </div>
-            </div>
-          `
           // pushing all the added products on the cart 
           console.log(`${product.title} added`);
           cart.push(product)
-          console.log(cart);
+          counter = ''
+          cart.forEach((prod)=>{
+          // creating the cart section dynamically 
+            counter += ` 
+            <div class="product">
+                  <div class="left"><img src="${prod.image}" ></div>
+                  <div class="right">
+                      <h2>${prod.title}</h2>
+                      <p>price : ${prod.price}</p>
+                  </div>
+              </div>
+            `
+            document.querySelector('.productsection').innerHTML = counter
+            console.log(prod);
+          })
           
         }else{
-          console.log('no');
+          console.log('Not clicked');
         }
       })
 
