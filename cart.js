@@ -33,6 +33,7 @@ fetch("https://dummyjson.com/products")
       let addBtn = document.createElement("button");
       addBtn.innerHTML = "Add to cart";
       addBtn.id = "add";
+      document.querySelector('.productsection').innerHTML = '<h1>Cart is empty</h1>'
       div.addEventListener('click',(e)=>{
         if(e.target === addBtn){
           // showing the animation after clicking the add button 

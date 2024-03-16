@@ -180,6 +180,11 @@ h1{
     width: calc(100% - 30%);
     background-color: #979bb3;
 }
+.productsection>h1{
+    font-size: 30px;
+    margin-left: 5.5vw;
+    color: #282828;
+}
 .product>.right>h2{
     font-size: 20px;
 }
@@ -188,7 +193,7 @@ h1{
 }
 
 /* little responsiveness  */
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 395px) {
     .cartsection{
     width: 100%;
     }
@@ -207,5 +212,8 @@ h1{
     }
     .wrapper{
         padding-left: 50px;
+    }
+    .productsection>h1{
+        margin-left: 25vw;
     }
 }
