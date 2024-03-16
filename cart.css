@@ -186,3 +186,26 @@ h1{
 .product>.right>p{
     font-weight: 700;
 }
+
+/* little responsiveness  */
+@media screen and (min-width: 375px) {
+    .cartsection{
+    width: 100%;
+    }
+    #closebtn{
+        padding-right: 20px;
+    }
+    .nleft>h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .nleft{
+        padding: 0;
+    }
+    .nright{
+        padding-right: 160px;
+    }
+    .wrapper{
+        padding-left: 50px;
+    }
+}
